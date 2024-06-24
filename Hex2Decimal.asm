@@ -23,7 +23,7 @@
 	li $t6 0	
 	# Base hexadecimal           
 	li $t8 16
-      # Signo         
+      	# Signo         
 	li $t5 1
 
 	# Se lee el signo
@@ -50,8 +50,8 @@
 		beqz $t0 fin_loop1
 		beq $t0 0xA fin_loop1
     
-		# Convertir caracter hexadecimal a valor numérico
-		# añadimos letra
+		# Convertir caracter hexadecimal a valor numÃ©rico
+		# aÃ±adimos letra
 		bgt $t0 0x39 revisar_letra
 		addi $t0 $t0 -0x30
 		b suma
@@ -62,7 +62,7 @@
 		suma:
 			# Multiplicamos el acumulador por 16
 			mul $t6 $t6 $t8
-			# Sumamos el valor numérico al acumulador
+			# Sumamos el valor numÃ©rico al acumulador
 			add $t6 $t6 $t0
     
 			addi $t9 $t9 1    
